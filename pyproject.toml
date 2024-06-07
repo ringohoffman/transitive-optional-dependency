@@ -1,0 +1,18 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[project]
+name = "transitive_optional_dependency"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+all = [
+    "transitive_optional_dependency[docs]",
+]
+docs = [
+    "mike @ git+https://github.com/jimporter/mike@3f7d756#egg=mike",
+]
