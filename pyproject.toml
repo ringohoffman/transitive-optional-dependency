@@ -8,11 +8,6 @@ requires = [
 [project]
 name = "transitive_optional_dependency"
 dynamic = ["version"]
-
-[project.optional-dependencies]
-all = [
-    "transitive_optional_dependency[docs]",
-]
-docs = [
-    "mike @ git+https://github.com/jimporter/mike@3f7d756#egg=mike",
+dependencies = [
+    "transformers[torch] @ git+https://github.com/huggingface/transformers@1f33023cfa998c237372baff36b166c014f33405#egg=transformers",
 ]
